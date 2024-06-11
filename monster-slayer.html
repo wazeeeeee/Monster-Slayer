@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Slayer</title>
+    <link rel="stylesheet" href="src/monster-slayer.css">  
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <p>WAZEEE / </p>
+                <span class="blank_space">s</span>
+                <button><li><a href="index.html">HOME<img src="src/UX/Vector.svg" alt="vector-arrow"></a></li></button>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="fade-in" id="content">
+        <h1>Monster Slayer</h1>
+        <p style="color: white;">Heros</p>
+        <div id="hero-health" class="health-bar">
+            <div class="health-bar-fill" id="herosHealth"></div>
+        </div>
+        <p style="color: white;">Monster</p>
+        <div id="monster-health" class="health-bar">
+            <div class="health-bar-fill" id="monsterHealth"></div>
+        </div> 
+        <div class="buttons">
+            <button style="background-color: red;" id="hit"><img src="./src/UX/sword-hit.png">Attack</button>
+            <button style="background-color: rgb(229, 229, 65);" id="attackspecial"><img src="./src/UX/sword-specialattack.png">Special Attack</button>
+            <button style="background-color: green;" id="heal"><img src="./src/UX/heal.png">Heal</button>
+            <button style="background-color: black;" id="giveup"><img src="./src/UX/white-flag.png">Give Up</button>
+        </div>
+        <div id="log" class="log"></div>
+    </div>
+    <script type="module" src="dist/index.js"></script>
+</body>
+</html>
