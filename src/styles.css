@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Geist-Mono-R';
+    src: url('../src/fonts/GeistMono-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Geist-Mono-B';
+    src: url('../src/fonts/GeistMono-Bold.ttf') format('truetype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    background-color: #141414;
+    background-image: url('../src/UX/grid.png');
+    background-size: cover;
+    background-position: center;                    
+    background-repeat: no-repeat;  
+    font-family: 'Geist-Mono-R', sans-serif;
+    width: 100%;
+    height: 100vh;
+
+}
+
+/* Header */
+header {
+    font-size: 13.3333px;
+}
+
+    .navbar {
+        
+        width: 100%;
+        height: 50px;
+        background-color: black;
+        color: #8C8C8C;
+        text-align: center;
+    }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+        }
+
+            .navbar ul button li {
+                list-style-type: none;
+            }
+
+            .navbar ul button li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .navbar ul button {
+                background:none;
+                border: none;
+                cursor: pointer;
+            }
+
+        .blank_space {
+            font-size: 15px;
+            opacity: 0;
+        }
+
+        .navbar ul img {
+            margin-left: 5px;
+            margin-bottom: 2px;
+        }
+
+.userName {
+    display: flex;
+    text-align: left;
+    color: #8C8C8C;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+    .userName button {
+        background: none;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        .userName button p {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: 'Geist-Mono-R';
+        }
+
+    .userName img {
+        position: absolute;
+        left: 125px;
+        text-align: left;
+    }
+
+/* TITLE SLIDE */
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    h1 {
+        font-size: 160px;
+        font-family: 'Geist-Mono-B';
+        color: #818181;
+        transition: ease-in;
+        margin-left: -30%;
+        letter-spacing: 0px;
+        animation: slidein 1s;
+        opacity: 1;
+    }
+
+        h1 .wazeee {
+            color: white;
+            font-family: 'Geist-Mono-B';
+            transition: 0.5s ease;
+            opacity: 75%;
+            transition: opacity 0.3s ease;
+        }
+
+            .wazeee:hover {
+                border: 1px solid #FF6A00;
+                cursor: pointer;
+                opacity: 150%;
+            }
+
+        h1 .devweb {
+            color: white;
+            font-family: 'Geist-Mono-B';
+            transition: 0.5s ease;
+            opacity: 75%;
+            transition: filter 0.3s ease;
+        }
+
+            .devweb:hover {
+                border: 1px solid #FF6A00;
+                cursor: pointer;
+                opacity: 150%;
+            }
+
+/* Monster slayer */
+
+#content {
+    top: 100px;
+    left: 100px;
+    position: absolute;
+    width: 298px;
+    height: 150px;
+    background-color: #242424;
+    opacity: 1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+    #content.fade-in {
+        animation-name: fadeIn;
+    }
+
+    #content .title {
+        margin-top: 8px;
+        margin-left: 8px;
+        width: 282px;
+        height: 40px;
+        background-color: #141414;
+        text-align: left;
+        font-size: 14px;
+        line-height: 16.8px;
+        letter-spacing: -0.344px;
+        display: flex;
+        align-items: center;
+        color: #f2f2f2;
+    }
+
+    #content .title p {
+        margin-left: 10px;
+    }
+
+    #content button {
+        margin-top: 23px;
+        margin-left: 15px;
+        background-color: transparent;
+        font-size: 30.5778px;
+        line-height: 30.5778px;
+        letter-spacing: -0.917333px;
+        color: #8c8c8c;
+        border: none;
+    }
+
+    #content button a {
+        text-decoration: none;
+        color: #8c8c8c;
+    }
+
+
+
+
+@media (max-width: 1500px) {
+    h1 {
+        font-size: 130px;
+        animation: slidein 1s;
+    }
+}
+@media (max-width: 500px) {
+    h1 {
+        transform: scale(0px);
+        font-size: 35px;
+    }
+    .userName {
+        display: none;
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 150%;
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
